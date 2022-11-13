@@ -16,6 +16,8 @@ public class Npc : MonoBehaviour
 
     private Sprite playerSprite;
     
+    
+    
     public string npcName;
     public string npcGender;
     public int npcAge;
@@ -33,6 +35,7 @@ public class Npc : MonoBehaviour
         playerSprite = playerMovement.playerSprite;
     }
 
+   
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -70,10 +73,25 @@ public class Npc : MonoBehaviour
                 dialogue.ShowMessage(playerSprite,"Hello, " + npcName + "I am , Player how is it going?");
                 Debug.Log("IS this think working?");
                 
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    StartCoroutine(PlayerRespondShower());
+                }
+                
+                
             }
             
         }
         
         
     }
+
+    private IEnumerator PlayerRespondShower()
+    {
+        yield return new WaitForSeconds(2f);
+        GreetPlayer();
+        
+    }
+    
+    
 }

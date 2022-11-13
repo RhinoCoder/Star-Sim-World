@@ -8,6 +8,8 @@ TagManager:
   - goToHall
   - goToEntrance
   - npc
+  - spawnPoint
+  - Seller
   layers:
   - Default
   - TransparentFX
