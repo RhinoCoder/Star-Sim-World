@@ -18,6 +18,8 @@ public class Bank : MonoBehaviour
 
     void Start()
     {
+        
+        
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -25,9 +27,8 @@ public class Bank : MonoBehaviour
         }
 
         instance = this;
-
-
         goldText.text = goldAmount.ToString();
+        
     }
 
 

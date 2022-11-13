@@ -29,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         instance = this;
+        
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+        if (objs.Length > 1){Destroy(this.gameObject);}
+
+        dialogue = FindObjectOfType<Dialogue>();
+
+        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     private void Update()
@@ -61,16 +69,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("goToShop"))
         {
+             
             SceneManager.LoadScene(2);
         }
 
         if (other.gameObject.CompareTag("goToHall"))
         {
+             
             SceneManager.LoadScene(1);
         }
 
         if (other.gameObject.CompareTag("goToEntrance"))
         {
+             
             SceneManager.LoadScene(0);
         }
 

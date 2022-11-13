@@ -10,11 +10,12 @@ public class Item : MonoBehaviour
     public string itemName;
     public int itemCost;
     public Image itemImage;
+    public Bank bank;
 
+    
     [SerializeField] private Image itemIcon; 
     [SerializeField] private TMP_Text itemDescription;
-    [SerializeField] private Bank bank;
-
+    
 
     private void Start()
     {

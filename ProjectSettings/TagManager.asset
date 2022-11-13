@@ -10,6 +10,7 @@ TagManager:
   - npc
   - spawnPoint
   - Seller
+  - Item
   layers:
   - Default
   - TransparentFX

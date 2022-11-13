@@ -5,7 +5,7 @@ using DG.Tweening;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Bank bank;
+    public Bank bank;
     
     void Start()
     {
